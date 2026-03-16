@@ -1,0 +1,218 @@
+items,sub_category,category,variation,size
+White Chocolate,Milk Based,Beverages,Hot,
+White Chocolate,Milk Based,Beverages,Cold,
+Matcha,Milk Based,Beverages,Hot,
+Matcha,Milk Based,Beverages,Cold,
+Chocolate,Milk Based,Beverages,Hot,
+Chocolate,Milk Based,Beverages,Cold,
+Caramel Macchiato,Coffee Based,Beverages,Hot,
+Caramel Macchiato,Coffee Based,Beverages,Cold,
+Americano,Coffee Based,Beverages,Hot,
+Americano,Coffee Based,Beverages,Cold,
+White Mocha,Coffee Based,Beverages,Hot,
+White Mocha,Coffee Based,Beverages,Cold,
+White Mocha Hazelnut,Coffee Based,Beverages,Hot,
+White Mocha Hazelnut,Coffee Based,Beverages,Cold,
+Latte,Coffee Based,Beverages,Hot,
+Latte,Coffee Based,Beverages,Cold,
+Cappuccino,Coffee Based,Beverages,Hot,
+Cappuccino,Coffee Based,Beverages,Cold,
+Vietnamese,Coffee Based,Beverages,Hot,
+Vietnamese,Coffee Based,Beverages,Cold,
+Spanish Latte,Coffee Based,Beverages,Hot,
+Spanish Latte,Coffee Based,Beverages,Cold,
+Mocha,Coffee Based,Beverages,Hot,
+Mocha,Coffee Based,Beverages,Cold,
+Salted Caramel Latte,Coffee Based,Beverages,Hot,
+Salted Caramel Latte,Coffee Based,Beverages,Cold,
+Flavored Latte,Coffee Based,Beverages,Hot,
+Flavored Latte,Coffee Based,Beverages,Cold,
+Matcha Espresso,Coffee Based,Beverages,Hot,
+Matcha Espresso,Coffee Based,Beverages,Cold,
+Biscoff Latte,Coffee Based,Beverages,Hot,
+Biscoff Latte,Coffee Based,Beverages,Cold,
+Nutella Latte,Coffee Based,Beverages,Hot,
+Nutella Latte,Coffee Based,Beverages,Cold,
+Amantes,Coffee Based,Beverages,Hot,
+Amantes,Coffee Based,Beverages,Cold,
+Biscoff Milk,Milk Based,Beverages,Hot,
+Biscoff Milk,Milk Based,Beverages,Cold,
+Nutella Milk,Milk Based,Beverages,Hot,
+Nutella Milk,Milk Based,Beverages,Cold,
+Matcha Latte,Milk Based,Beverages,Hot,
+Matcha Latte,Milk Based,Beverages,Cold,
+Strawberry Matcha,Milk Based,Beverages,Hot,
+Strawberry Matcha,Milk Based,Beverages,Cold,
+Oreo Matcha,Milk Based,Beverages,Hot,
+Oreo Matcha,Milk Based,Beverages,Cold,
+Sea Salt Foam Latte,Coffee Based,Beverages,Hot,
+Sea Salt Foam Latte,Coffee Based,Beverages,Cold,
+Cinnamon Oat Latte,Milk Based,Beverages,Hot,
+Cinnamon Oat Latte,Milk Based,Beverages,Cold,
+Oat Hazelnut Mocha,Milk Based,Beverages,Hot,
+Oat Hazelnut Mocha,Milk Based,Beverages,Cold,
+Dirty Matcha,Coffee Based,Beverages,Hot,
+Dirty Matcha,Coffee Based,Beverages,Cold,
+Oat Pistachio,Milk Based,Beverages,Hot,
+Oat Pistachio,Milk Based,Beverages,Cold,
+Matcha Cream,Blended Cream,Beverages,,
+Strawberry Milk,Milk Based,Beverages,,
+Oreo Milk,Milk Based,Beverages,,
+Green Apple Fruit Tea,Fruit Based,Beverages,,
+Peppermint,Hot Tea,Beverages,,
+Oreo Cream,Blended Cream,Beverages,,
+Passion Fruit Cooler,Fruit Based,Beverages,,
+Chocolate Chip Cream,Blended Cream,Beverages,,
+Caramel Cream,Blended Cream,Beverages,,
+Mocha Blended,Blended Coffee,Beverages,,
+Coffee Blended,Blended Coffee,Beverages,,
+Caramel Blended,Blended Cream,Beverages,,
+Java Chip Blended,Blended Coffee,Beverages,,
+Strawberry Cream,Blended Cream,Beverages,,
+Nutella Cream,Blended Cream,Beverages,,
+Chocolate Cream,Blended Cream,Beverages,,
+Vanilla Cream,Blended Cream,Beverages,,
+Coffee Jelly Blended,Blended Coffee,Beverages,,
+White Chocolate Cream,Blended Cream,Beverages,,
+Biscoff Cream,Blended Cream,Beverages,,
+Nutella Blended,Blended Cream,Beverages,,
+Biscoff Blended,Blended Cream,Beverages,,
+Hazelnut Blended,Blended Coffee,Beverages,,
+White Mocha Blended,Blended Coffee,Beverages,,
+Blueberry Milk,Milk Based,Beverages,,
+Mango Yakult,Fruit Based,Beverages,,
+Blueberry Yakult,Fruit Based,Beverages,,
+Strawberry Yakult,Fruit Based,Beverages,,
+Fruit Lemonade W/ Popping Pearls,Fruit Based,Beverages,,
+Passion Fruit,Fruit Based,Beverages,,
+Chamomile,Hot Tea,Beverages,,
+Pineapple In Can,Canned/Bottled Drinks,Beverages,,
+Pineapple,Fruit Based,Beverages,,
+Coke In Can,Canned/Bottled Drinks,Beverages,,
+Bottled Water,Canned/Bottled Drinks,Beverages,,
+Signature Chocolate,Moist Cakes,Desserts,,Solo
+Signature Chocolate,Moist Cakes,Desserts,,Duo
+Signature Chocolate,Moist Cakes,Desserts,,Medio
+Signature Chocolate,Moist Cakes,Desserts,,Familia
+Garnet Velvet,Moist Cakes,Desserts,,Solo
+Garnet Velvet,Moist Cakes,Desserts,,Duo
+Garnet Velvet,Moist Cakes,Desserts,,Medio
+Garnet Velvet,Moist Cakes,Desserts,,Familia
+Choco Almond,Moist Cakes,Desserts,,Solo
+Choco Almond,Moist Cakes,Desserts,,Duo
+Choco Almond,Moist Cakes,Desserts,,Medio
+Choco Almond,Moist Cakes,Desserts,,Familia
+Choco Caramel,Moist Cakes,Desserts,,Solo
+Choco Caramel,Moist Cakes,Desserts,,Duo
+Choco Caramel,Moist Cakes,Desserts,,Medio
+Choco Caramel,Moist Cakes,Desserts,,Familia
+Pecan Walnut Carrot,Moist Cakes,Desserts,,Solo
+Pecan Walnut Carrot,Moist Cakes,Desserts,,Duo
+Pecan Walnut Carrot,Moist Cakes,Desserts,,Medio
+Pecan Walnut Carrot,Moist Cakes,Desserts,,Familia
+Oreo Cheesecake,Cheesecakes,Desserts,,Solo
+Oreo Cheesecake,Cheesecakes,Desserts,,Duo
+Oreo Cheesecake,Cheesecakes,Desserts,,Medio
+Oreo Cheesecake,Cheesecakes,Desserts,,Familia
+Biscoff Cheesecake,Cheesecakes,Desserts,,Solo
+Biscoff Cheesecake,Cheesecakes,Desserts,,Duo
+Biscoff Cheesecake,Cheesecakes,Desserts,,Medio
+Biscoff Cheesecake,Cheesecakes,Desserts,,Familia
+Ube Cheesecake,Cheesecakes,Desserts,,Solo
+Ube Cheesecake,Cheesecakes,Desserts,,Duo
+Ube Cheesecake,Cheesecakes,Desserts,,Medio
+Ube Cheesecake,Cheesecakes,Desserts,,Familia
+Strawberry Cheesecake,Cheesecakes,Desserts,,Solo
+Strawberry Cheesecake,Cheesecakes,Desserts,,Duo
+Strawberry Cheesecake,Cheesecakes,Desserts,,Medio
+Strawberry Cheesecake,Cheesecakes,Desserts,,Familia
+Nutella Cheesecake,Cheesecakes,Desserts,,Solo
+Nutella Cheesecake,Cheesecakes,Desserts,,Duo
+Nutella Cheesecake,Cheesecakes,Desserts,,Medio
+Nutella Cheesecake,Cheesecakes,Desserts,,Familia
+Mango Cheesecake,Cheesecakes,Desserts,,Solo
+Mango Cheesecake,Cheesecakes,Desserts,,Duo
+Mango Cheesecake,Cheesecakes,Desserts,,Medio
+Mango Cheesecake,Cheesecakes,Desserts,,Familia
+Blueberry Cheesecake,Cheesecakes,Desserts,,Solo
+Blueberry Cheesecake,Cheesecakes,Desserts,,Duo
+Blueberry Cheesecake,Cheesecakes,Desserts,,Medio
+Blueberry Cheesecake,Cheesecakes,Desserts,,Familia
+New York Cheesecake,Cheesecakes,Desserts,,Solo
+New York Cheesecake,Cheesecakes,Desserts,,Duo
+New York Cheesecake,Cheesecakes,Desserts,,Medio
+New York Cheesecake,Cheesecakes,Desserts,,Familia
+Pistachio Cheesecake,Cheesecakes,Desserts,,Solo
+Pistachio Cheesecake,Cheesecakes,Desserts,,Duo
+Pistachio Cheesecake,Cheesecakes,Desserts,,Medio
+Pistachio Cheesecake,Cheesecakes,Desserts,,Familia
+Biscoff Tiramisu,Cheesecakes,Desserts,,
+White Chocolate Chip,Pastries,Desserts,,
+Banana Bread,Pastries,Desserts,,
+Crookie,Pastries,Desserts,,
+Crinkles,Pastries,Desserts,,
+Cookies - Biscoff,Pastries,Desserts,,
+Cookies - Chip And Chunk,Pastries,Desserts,,
+Cookies - Chip And Chunk Walnut,Pastries,Desserts,,
+Cookies - Nutella Pecan,Pastries,Desserts,,
+Cookies - Red Velvet,Pastries,Desserts,,
+Cookies - Smores,Pastries,Desserts,,
+Cookies - Dubai,Pastries,Desserts,,
+Croffle - Plain,Pastries,Desserts,,
+Croffle - Oreo,Pastries,Desserts,,
+Croffle - Chocolate,Pastries,Desserts,,
+Croffle - Caramel,Pastries,Desserts,,
+Croffle - Biscoff,Pastries,Desserts,,
+Croffle - Almond Nutella,Pastries,Desserts,,
+Croffle - Smores,Pastries,Desserts,,
+Croffle - Matcha,Pastries,Desserts,,
+Croffle - Strawberry Cream,Pastries,Desserts,,
+Croissant - Plain,Pastries,Desserts,,
+Croissant - Almond Nutella,Pastries,Desserts,,
+Croissant - Oreo,Pastries,Desserts,,
+Croissant - Chocolate,Pastries,Desserts,,
+Croissant - Caramel,Pastries,Desserts,,
+Croissant - Biscoff,Pastries,Desserts,,
+Croissant - Spam And Egg,Pastries,Desserts,,
+Croissant - Strawberry Cream,Pastries,Desserts,,
+Corned Beef With Rice And Egg,All Day Breakfast,Food,,
+Bacon With Rice And Egg,All Day Breakfast,Food,,
+Spam With Rice And Egg,All Day Breakfast,Food,,
+Morning Spam,All Day Breakfast,Food,,
+Cheese Sticks,Appetizers,Food,,
+Chicken Fingers,Appetizers,Food,,
+French Fries,Appetizers,Food,,
+French Fries Overload,Appetizers,Food,,
+Fries Overload,Appetizers,Food,,
+Mojos,Appetizers,Food,,
+Nachos,Appetizers,Food,,
+Spring Rolls,Appetizers,Food,,
+Carbonara,Pasta,Food,,
+Chicken Aglio Olio,Pasta,Food,,
+Chicken Pesto,Pasta,Food,,
+Creamy Lasagna,Pasta,Food,,
+Shrimp Aglio Olio,Pasta,Food,,
+Spaghetti Meatballs,Pasta,Food,,
+Spicy Tuna Pasta,Pasta,Food,,
+Pesto Egg Melt,Pasta,Food,,
+Chicken Salpicao,Rice Meals,Food,,
+Pad Kra Pao,Rice Meals,Food,,
+Spicy Pork Stir Fry,Rice Meals,Food,,
+Pork Stir Fry,Rice Meals,Food,,
+Tender Beef Plate,Rice Meals,Food,,
+Homestyle Corned Beef,Rice Meals,Food,,
+Seared Chicken Garden Bowl,Rice Meals,Food,,
+Chicken Longganisa,Rice Meals,Food,,
+Bacon And Egg Sandwich,Sandwiches,Food,,
+Clubhouse,Sandwiches,Food,,
+Clubhouse Stack,Sandwiches,Food,,
+Crispy Chicken Sandwich,Sandwiches,Food,,
+Spam And Egg Sandwich,Sandwiches,Food,,
+Chicken Salad Sandwich,Sandwiches,Food,,
+Extra Rice,Food Add-Ons,Add-Ons,,
+Extra Cheese Sauce,Food Add-Ons,Add-Ons,,
+Extra Egg,Food Add-Ons,Add-Ons,,
+Extra Aioli Dip,Food Add-Ons,Add-Ons,,
+Candle,Add-Ons (Cake),Add-Ons,,
+Topper,Add-Ons (Cake),Add-Ons,,
+Valentine's Dinner Full Payment,Others,Others,,
