@@ -43,8 +43,10 @@ Matcha Latte,Milk Based,Beverages,Hot,
 Matcha Latte,Milk Based,Beverages,Cold,
 Strawberry Matcha,Milk Based,Beverages,Hot,
 Strawberry Matcha,Milk Based,Beverages,Cold,
+Strawberry Matcha,Milk Based,Beverages,,
 Oreo Matcha,Milk Based,Beverages,Hot,
 Oreo Matcha,Milk Based,Beverages,Cold,
+Oreo Matcha,Milk Based,Beverages,,
 Sea Salt Foam Latte,Coffee Based,Beverages,Hot,
 Sea Salt Foam Latte,Coffee Based,Beverages,Cold,
 Cinnamon Oat Latte,Milk Based,Beverages,Hot,
@@ -142,6 +144,7 @@ New York Cheesecake,Cheesecakes,Desserts,,Solo
 New York Cheesecake,Cheesecakes,Desserts,,Duo
 New York Cheesecake,Cheesecakes,Desserts,,Medio
 New York Cheesecake,Cheesecakes,Desserts,,Familia
+Pistachio Cheesecake,Cheesecakes,Desserts,,
 Pistachio Cheesecake,Cheesecakes,Desserts,,Solo
 Pistachio Cheesecake,Cheesecakes,Desserts,,Duo
 Pistachio Cheesecake,Cheesecakes,Desserts,,Medio
@@ -182,8 +185,10 @@ Morning Spam,All Day Breakfast,Food,,
 Cheese Sticks,Appetizers,Food,,
 Chicken Fingers,Appetizers,Food,,
 French Fries,Appetizers,Food,,
+French Fries Platter,Appetizers,Food,,
 French Fries Overload,Appetizers,Food,,
 Fries Overload,Appetizers,Food,,
+Fries Platter,Appetizers,Food,,
 Mojos,Appetizers,Food,,
 Nachos,Appetizers,Food,,
 Spring Rolls,Appetizers,Food,,
@@ -215,4 +220,4 @@ Extra Egg,Food Add-Ons,Add-Ons,,
 Extra Aioli Dip,Food Add-Ons,Add-Ons,,
 Candle,Add-Ons (Cake),Add-Ons,,
 Topper,Add-Ons (Cake),Add-Ons,,
-Valentine's Dinner Full Payment,Others,Others,,
+Valentine'S Dinner Full Payment,Others,Others,,
