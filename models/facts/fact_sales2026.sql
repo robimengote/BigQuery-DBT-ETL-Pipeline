@@ -1,4 +1,12 @@
-{{ config(materialized='incremental') }}
+{{ config(
+    materialized='incremental',
+    partition_by={
+        "field": "payment_time",
+        "data_type": "datetime",
+        "granularity": "day"
+    },
+    cluster_by=["category", "sub_category"]    
+) }}
 
 WITH raw AS (
     SELECT *
@@ -19,7 +27,8 @@ dim_order AS (SELECT * FROM {{ ref('dim_order_type') }})
 
 SELECT
     -- ── Surrogate Keys ────────────────────────────────────
-    CAST(FORMAT_DATE('%Y%m%d', DATE(raw.payment_time)) AS INT64)    AS date_key,
+    CAST(raw.payment_time AS DATETIME)                               AS payment_time,
+    CAST(FORMAT_DATE('%Y%m%d', DATE(raw.payment_time)) AS INT64)     AS date_key,
     COALESCE(dp.product_key, -1)                                     AS product_key,
     COALESCE(df.flavor_key, 0)                                       AS flavor_key,
     COALESCE(ds.sugar_key, 0)                                        AS sugar_key,
@@ -29,6 +38,8 @@ SELECT
 
     -- ── Degenerate Dimensions ─────────────────────────────
     raw.order_id,
+    raw.category,
+    raw.sub_category,
 
     -- ── Measures ──────────────────────────────────────────
     raw.quantity,
