@@ -1,0 +1,12 @@
+# Security & Credentials
+.env
+keys/
+*.json
+*.pem
+
+# Airflow Auto-generated files
+logs/
+
+# Python Cache
+__pycache__/
+*.pyc
