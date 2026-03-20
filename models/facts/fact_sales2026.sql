@@ -12,7 +12,7 @@ WITH raw AS (
     SELECT *
     FROM `pos-pipeline-airflow.pos_data.staging_fact_sales`
     {% if is_incremental() %}
-    WHERE payment_time > (SELECT MAX(payment_time) FROM {{ this }})
+    WHERE CAST(payment_time AS DATETIME) > (SELECT MAX(payment_time) FROM {{ this }})
     {% endif %}
 
 ),
