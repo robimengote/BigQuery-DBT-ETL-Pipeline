@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Security & Credentials
 .env
 keys/
@@ -10,3 +11,9 @@ logs/
 # Python Cache
 __pycache__/
 *.pyc
+=======
+
+target/
+dbt_packages/
+logs/
+>>>>>>> a3cddf5f2566414b1cde2c9ec984e0255fb1bd61
