@@ -320,22 +320,33 @@ def archive_file(source_blob_name, timestamp):
         raise
 
 
-def archive_files_new(source_path, namebucket):
+def archive_files_new(source_path, namebucket, time):
     try:
+        # Setup
         bucket_name = namebucket
         client = storage.Client()
         bucket = client.bucket(bucket_name)
         source = bucket.blob(source_path)
-        manila_time = pytz.timezone('Asia/Manila')
-        timestamp = datetime.now(pytz.utc).astimezone(manila_time).strftime("%Y-%m-%d")
+        
+        timestamp = f"{time}"
         filename = source_path.split("/")[-1]
         destination_path = f"processed/{timestamp}/{filename}"
+        
+        # 1. Execute the copy command
         bucket.copy_blob(source, bucket, destination_path)
-        source.delete()
-        print("Successfully archived")
+
+        # 2. VERIFY WITH GCP: Ping the destination to ensure it physically exists
+        destination_blob = bucket.blob(destination_path)
+        if destination_blob.exists():
+            source.delete()
+            print(f"✅ Successfully archived: {filename}")
+        else:
+            raise FileNotFoundError(f"Verification failed: {filename} not found in GCS.")
 
     except Exception as e:
-        print(e)
+        print(f"⚠️ Critical error archiving {filename}. Error: {e}")
+        raise e
+
 
 # -----------------------------------------
 # BIGQUERY
@@ -431,7 +442,7 @@ def load_parquet_to_bigquery_quarantine(uri, table_id):
 
         job_config = bigquery.LoadJobConfig(
         source_format=bigquery.SourceFormat.PARQUET,
-        write_disposition=bigquery.WriteDisposition.WRITE_APPEND,
+        write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
         schema=schema_quarantine_fact_sales, autodetect=False,
         )
 

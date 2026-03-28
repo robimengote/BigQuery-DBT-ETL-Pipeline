@@ -1,0 +1,14 @@
+amantes_dbt:
+  outputs:
+    dev:
+      dataset: 
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: "PASTE THE LOCATION OF THE JSON FILE HERE"
+      location: asia-southeast1
+      method: service-account
+      priority: interactive
+      project: "THE NAME OF YOUR PROJECT"
+      threads: 4
+      type: bigquery
+  target: dev

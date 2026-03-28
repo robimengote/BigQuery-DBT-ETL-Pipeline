@@ -1,0 +1,13 @@
+# --- Data Processing ---
+pandas
+openpyxl
+pyarrow
+
+# --- Google Cloud Platform ---
+google-cloud-storage
+google-cloud-bigquery
+apache-airflow-providers-google
+
+# --- Transformation Layer (dbt) ---
+dbt-core
+dbt-bigquery
