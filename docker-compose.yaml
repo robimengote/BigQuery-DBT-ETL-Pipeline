@@ -60,12 +60,12 @@ x-airflow-common:
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-    GOOGLE_APPLICATION_CREDENTIALS: /home/airflow/.config/gcloud/application_default_credentials.json
-    GCS_BUCKET_NAME: pos-pipeline-airflow-test
-    AMANTES_GCS_BUCKET: amantes
-    GCS_PROJECT_ID: pos-pipeline-airflow
-    GOOGLE_CLOUD_PROJECT: pos-pipeline-airflow
-    GCLOUD_PROJECT: pos-pipeline-airflow
+    GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS}
+    GCS_BUCKET_NAME: ${GCS_BUCKET_NAME}
+    AMANTES_GCS_BUCKET: ${AMANTES_GCS_BUCKET}
+    GCS_PROJECT_ID: ${GCP_PROJECT_ID
+    GOOGLE_CLOUD_PROJECT: ${GCLOUD_PROJECT}
+    GCLOUD_PROJECT: ${GCLOUD_PROJECT}
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
