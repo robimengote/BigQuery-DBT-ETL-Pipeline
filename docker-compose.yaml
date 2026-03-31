@@ -63,7 +63,7 @@ x-airflow-common:
     GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS}
     GCS_BUCKET_NAME: ${GCS_BUCKET_NAME}
     AMANTES_GCS_BUCKET: ${AMANTES_GCS_BUCKET}
-    GCS_PROJECT_ID: ${GCP_PROJECT_ID
+    GCS_PROJECT_ID: ${GCP_PROJECT_ID}
     GOOGLE_CLOUD_PROJECT: ${GCLOUD_PROJECT}
     GCLOUD_PROJECT: ${GCLOUD_PROJECT}
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
@@ -81,6 +81,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     - ${AIRFLOW_PROJ_DIR:-.}/keys:/opt/airflow/keys
+    - ./amantes_dbt:/opt/airflow/amantes_dbt
     - ${APPDATA}/gcloud:/home/airflow/.config/gcloud:ro
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
