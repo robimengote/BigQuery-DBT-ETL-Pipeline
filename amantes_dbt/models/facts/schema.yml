@@ -1,0 +1,116 @@
+version: 2
+
+models:
+  - name: fact_sales2026
+    description: "Fact table for Amantes café sales transactions in 2026"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - order_id
+            - product_key
+            - flavor_key
+            - sugar_key
+            - spice_key
+
+    columns:
+      # --- Surrogate Keys ---
+      - name: payment_time
+        description: "Timestamp of the transaction"
+        tests:
+          - not_null
+
+      - name: date_key
+        description: "Integer date key in YYYYMMDD format"
+        tests:
+          - not_null
+
+      - name: product_key
+        description: "FK to dim_products, -1 if unmatched/uncategorized"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "!= -1"
+              config:
+                severity: warn
+
+      - name: flavor_key
+        description: "FK to dim_flavors, 0 if not applicable"
+        tests:
+          - not_null
+
+      - name: sugar_key
+        description: "FK to dim_sugar, 0 if not applicable"
+        tests:
+          - not_null
+
+      - name: spice_key
+        description: "FK to dim_spice, 0 if not applicable"
+        tests:
+          - not_null
+
+      - name: payment_type_key
+        description: "FK to dim_payment_type, should never be 0"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "!= 0"
+              config:
+                severity: error
+                store_failures: true
+
+      - name: order_type_key
+        description: "FK to dim_order_type, should never be 0"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "!= 0"
+              config:
+                severity: error
+                store_failures: true
+
+      # --- Degenerate Dimensions ---
+      - name: order_id
+        description: "Original order identifier"
+        tests:
+          - not_null
+
+      - name: category
+        description: "Product category, Uncategorized if unmatched"
+        tests:
+          - not_null
+
+      - name: sub_category
+        description: "Product sub-category, Uncategorized if unmatched"
+        tests:
+          - not_null
+
+      # --- Measures ---
+      - name: quantity
+        description: "Number of items ordered"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "> 0"
+              config:
+                severity: error
+                store_failures: true
+
+      - name: total_order_amount
+        description: "Total amount for the order line"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "> 0"
+              config:
+                severity: error
+                store_failures: true
+
+      - name: received_amount
+        description: "Amount received from customer"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+              config:
+                severity: error
+                store_failures: true

@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: stg_fact_sales          # This is the "nickname" you give the source system
+    database: pos-pipeline-airflow # Your GCP Project ID
+    schema: pos_data               # Your BigQuery Dataset
+    tables:
+      - name: staging_fact_sales   # The exact name of the table Python created
+        description: "Raw landing table generated daily by the Airflow Python extraction script."
