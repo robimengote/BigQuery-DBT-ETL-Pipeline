@@ -226,7 +226,9 @@ The Power BI dashboard connects directly to BigQuery and provides:
 - Revenue breakdown by category and sub-category
 - Payment type and order type distribution
 - Product performance analysis
+
 ![Live Power BI Dashboard](assets/bi_dashboard.jpg)
+
  
 ---
  
