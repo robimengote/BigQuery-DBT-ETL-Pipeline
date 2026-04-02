@@ -1,4 +1,4 @@
-# ☕ Amantes Café — BigQuery DBT ETL Pipeline
+# ☕Airflow—BigQuery-DBT ELT/EtLT Pipeline
 
 > A production-grade, end-to-end data pipeline for a café point-of-sale system — built with Apache Airflow, dbt, Google BigQuery, and Power BI.
 
@@ -13,8 +13,7 @@
 ## 📌 Overview
 
 A **live, production-grade data pipeline** built on a real-world café 
-point-of-sale (POS) dataset — the same data source used across this 
-portfolio's pipeline projects.
+point-of-sale (POS) dataset — the same data source used from the [last ETL pipeline project](https://github.com/robimengote/Amante-s-Supabase-Full-Cloud-ETL-Pipeline). 
 
 This is not a static or simulated project. The pipeline runs on a schedule, 
 processes real transactions, handles late-arriving and malformed data, and serves a live Power BI dashboard backed by Google BigQuery.
