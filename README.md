@@ -59,6 +59,15 @@ wired together into a single, observable pipeline.
 
 ---
 
+## 🌟 Star Schema
+ 
+The data model follows a classic Star Schema with `fact_sales2026` at the center, surrounded by seven dimension tables. The model view below was generated directly from Power BI.
+ 
+![Star Schema - Power BI Model View](assets/bi_model.jpg)
+ 
+
+---
+
 ## 🛠️ Tech Stack
  
 | Layer | Tool |
@@ -147,15 +156,7 @@ A `MERGE`-based deduplication stored procedure ensures the pipeline can be safel
 | `dbt_recovery_int` | Fixes broken rows under INT columns and sets `is_reprocessed = TRUE`|
 | `dbt_recovery_str` | Fixes broken rows under STRING columns and sets `is_reprocessed = TRUE` |
 ---
- 
-## 🌟 Star Schema
- 
-The data model follows a classic Star Schema with `fact_sales2026` at the center, surrounded by seven dimension tables. The model view below was generated directly from Power BI.
- 
-![Star Schema - Power BI Model View](assets/bi_model.jpg)
- 
----
- 
+  
 ## 🚀 Getting Started
  
 ### Prerequisites
