@@ -36,9 +36,9 @@ wired together into a single, observable pipeline.
 │                    POS System (Raw CSV)                  │
 └─────────────────────────┬───────────────────────────────┘
                           ↓
-                 Python ETL (Extraction & Validation)
+                 Python ELT (Extraction & Validation)
                  ↙                          ↘
-          Good Rows                       Bad Rows
+          Good Rows                       Bad Rows 
               ↓                               ↓
       GCS (Data Lake)              Quarantine Table (BigQuery)
               ↓                               ↓
@@ -51,6 +51,10 @@ wired together into a single, observable pipeline.
    fact_sales2026 + Dims             Re-run dbt run
               ↓                               ↓
       Power BI Dashboard             reset_reprocessed_flag RPC (is_reprocessed = FALSE)
+
+
+⚠️ The quarantine recovery flow (right side) is manually triggered. It does not run automatically as part of the scheduled pipeline.
+
 ```
 
 ---
@@ -74,7 +78,7 @@ wired together into a single, observable pipeline.
 ## 📁 Project Structure
  
 ```
-BigQuery-DBT-ETL-Pipeline/
+Modern-ELT-Pipeline/
 ├── dags/                          # Airflow DAG definitions
 │   └── amantes_pipeline.py        # Main pipeline DAG
 ├── amantes_dbt/                   # dbt project
@@ -137,7 +141,7 @@ A `MERGE`-based deduplication stored procedure ensures the pipeline can be safel
 ### Recovery Stored Procedures
 | Procedure | Purpose |
 |---|---|
-| `dedup_staging_fact_sales` | Removes duplicates after ETL load |
+| `dedup_staging_fact_sales` | Removes duplicates after loading data |
 | `load_fixed_quarantine_rows` | Reinserts fixed rows with `is_reprocessed = TRUE` |
 | `reset_reprocessed_flag` | Resets flag after dbt processes rows |
 | `dbt_recovery_int` | Fixes broken rows under INT columns and sets `is_reprocessed = TRUE`|
@@ -162,8 +166,8 @@ The data model follows a classic Star Schema with `fact_sales2026` at the center
  
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/robimengote/BigQuery-DBT-ETL-Pipeline.git
-cd BigQuery-DBT-ETL-Pipeline
+git clone https://github.com/robimengote/Modern-ELT-Pipeline.git
+cd Modern-ELT-Pipeline
 ```
  
 ### 2. Set up environment variables
