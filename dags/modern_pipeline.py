@@ -6,6 +6,7 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 from airflow.providers.google.cloud.operators.bigquery import BigQueryInsertJobOperator
+from airflow.operatos.bash import BashOperator
 
 
 def bucket_to_tmp(**context):
@@ -159,17 +160,14 @@ with DAG(
         task_id='bucket_to_tmp',
         python_callable=bucket_to_tmp
     )
-
     upload_splitted = PythonOperator(
         task_id='upload_splitted',
         python_callable=upload
     )
-
     bigquery = PythonOperator(
         task_id='bigquery',
         python_callable=bucket_to_bigquery
     )
-
     trigger_dedup_merge = BigQueryInsertJobOperator(
         task_id='call_staging_merge_procedure',
         configuration={
@@ -179,7 +177,6 @@ with DAG(
             }
         }
     )
-
     trigger_dedup_merge_quarantine = BigQueryInsertJobOperator(
         task_id='call_quarantine_merge_procedure',
         configuration={
@@ -190,13 +187,31 @@ with DAG(
         }
     )
 
+    dbt_test_staging = BashOperator(
+    task_id='dbt_test_staging',
+    bash_command='cd /opt/airflow/amantes_dbt && dbt test --select source:stg_fact_sales',
+    )
+    
+    dbt_test_quarantine = BashOperator(
+    task_id='dbt_test_quarantine',
+    bash_command='cd /opt/airflow/amantes_dbt && dbt test --select source:quarantine',
+    )
+ 
     archiving = PythonOperator(
         task_id='archive_task',
         python_callable=archive
     )
 
+    dbt_run = BashOperator(
+        task_id='dbt_run',
+        bash_command='cd /opt/airflow/amantes_dbt && dbt run --select fact_sales2026',
+    )
 
-    bucket_to_docker >> upload_splitted >> bigquery >> trigger_dedup_merge >> trigger_dedup_merge_quarantine >> archiving
-
+    dbt_test = BashOperator(
+        task_id='dbt_test',
+        bash_command='cd /opt/airflow/amantes_dbt && dbt test --select fact_sales2026',
+    )
+    
+    bucket_to_docker >> upload_splitted >> bigquery >> trigger_dedup_merge >> trigger_dedup_merge_quarantine >> dbt_test_staging >> dbt_test_quarantine >>  archiving >> dbt_run >> dbt_test
 
 

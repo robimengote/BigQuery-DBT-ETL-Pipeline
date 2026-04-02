@@ -1,12 +1,12 @@
 version: 2
 
 sources:
-  - name: stg_fact_sales
+  - name: quarantine
     database: pos-pipeline-airflow
     schema: pos_data
     tables:
-      - name: staging_fact_sales
-        description: "Raw landing table generated daily by the Airflow Python extraction script."
+      - name: fact_sales_quarantine
+        description: "Quarantine table for rows that failed validation during extraction."
         tests:
           - dbt_utils.unique_combination_of_columns:
               combination_of_columns:
