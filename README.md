@@ -36,19 +36,21 @@ wired together into a single, observable pipeline.
 │                    POS System (Raw CSV)                  │
 └─────────────────────────┬───────────────────────────────┘
                           ↓
-                 Python ELT (Extraction & Validation)
+             Google Cloud Storage (Data Lake)
                  ↙                          ↘
-          Good Rows                       Bad Rows 
+      Good Rows to BigQuery            Bad Rows to BigQuery
               ↓                               ↓
-      GCS (Data Lake)              Quarantine Table (BigQuery)
+       temp_fact_sales               Quarantine Table (BigQuery) 
               ↓                               ↓
-   staging_fact_sales                  Repair row manually
+    MERGE RPC for idempotency          Repair row manually
               ↓                               ↓
-          dbt run                    load_fixed_rows RPC (is_reprocessed = TRUE)
+       staging_fact_sales         load_fixed_rows RPC (is_reprocessed = TRUE)
               ↓                               ↓
-          dbt test                   delete_fixed_rows RPC
+     dbt run + dimension tables       delete_fixed_rows RPC
               ↓                               ↓
-   fact_sales2026 + Dims             Re-run dbt run
+          dbt test					
+              ↓
+        fact_sales2026                  Re-run dbt run
               ↓                               ↓
       Power BI Dashboard             reset_reprocessed_flag RPC (is_reprocessed = FALSE)
 
